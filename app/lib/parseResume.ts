@@ -10,15 +10,20 @@ import mammoth from 'mammoth';
  * @returns Resume text as string
  */
 export async function parseResume(filename: string, buffer: Buffer): Promise<string> {
-  if (filename.toLowerCase().endsWith('.pdf')) {
-    const data = await pdfParse(buffer);
-    return data.text;
-  }
+  try {
+    if (filename.toLowerCase().endsWith('.pdf')) {
+      const data = await pdfParse(buffer);
+      return data.text;
+    }
 
-  if (filename.toLowerCase().endsWith('.docx')) {
-    const result = await mammoth.extractRawText({ buffer });
-    return result.value;
-  }
+    if (filename.toLowerCase().endsWith('.docx')) {
+      const result = await mammoth.extractRawText({ buffer });
+      return result.value;
+    }
 
-  throw new Error('Unsupported file format. Only PDF and DOCX are allowed.');
+    throw new Error('Unsupported file format. Only PDF and DOCX are allowed.');
+  } catch (error) {
+    console.error('Error parsing resume:', error);
+    throw new Error('Failed to parse resume. Please ensure the file is valid.');
+  }
 }
