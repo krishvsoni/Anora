@@ -16,6 +16,7 @@ import {
     Clock,
 } from "lucide-react";
 import Link from "next/link";
+import { UserButton } from "@clerk/nextjs";
 
 export default function ATSAnalyzePage() {
     const [uploadedFile, setUploadedFile] = useState<File | null>(null);
@@ -153,6 +154,7 @@ export default function ATSAnalyzePage() {
                                 <RotateCcw className="w-4 h-4 mr-2" />
                                 New Analysis
                             </button>
+                            <UserButton afterSignOutUrl="/" />
                         </div>
                     </div>
                 </div>

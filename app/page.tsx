@@ -1,10 +1,25 @@
 "use client";
 
-import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { useEffect } from 'react';
+import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton, useUser } from "@clerk/nextjs";
 import { FileText, Target, Zap, Shield, CheckCircle, Upload, BarChart3, ArrowRight, Menu } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function ATSLandingPage() {
+  const router = useRouter();
+  const { isSignedIn } = useUser();
+
+  useEffect(() => {
+    if (isSignedIn) {
+      router.push("/analyze");
+    }
+  }, [isSignedIn, router]);
+
+  const handleGetStarted = () => {
+    router.push("/analyze");
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <nav className="border-b bg-white/80 backdrop-blur-md sticky top-0 z-50">
@@ -42,6 +57,9 @@ export default function ATSLandingPage() {
                 </SignUpButton>
               </SignedOut>
               <SignedIn>
+                <Link href="/analyze" className="border border-blue-200 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-md transition-colors">
+                  Dashboard
+                </Link>
                 <UserButton afterSignOutUrl="/" />
               </SignedIn>
             </div>
@@ -72,10 +90,23 @@ export default function ATSLandingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-lg px-8 py-4 rounded-md transition-colors flex items-center justify-center">
-                Start Free Analysis
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
+              <SignedOut>
+                <SignUpButton mode="modal">
+                  <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-lg px-8 py-4 rounded-md transition-colors flex items-center justify-center">
+                    Start Free Analysis
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </button>
+                </SignUpButton>
+              </SignedOut>
+              <SignedIn>
+                <button
+                  onClick={handleGetStarted}
+                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-lg px-8 py-4 rounded-md transition-colors flex items-center justify-center"
+                >
+                  Start Free Analysis
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </button>
+              </SignedIn>
               <button className="border border-blue-200 text-blue-600 hover:bg-blue-50 text-lg px-8 py-4 rounded-md transition-colors">
                 Watch Demo
               </button>
@@ -244,10 +275,23 @@ export default function ATSLandingPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <button className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4 rounded-md transition-colors flex items-center justify-center">
-              Start Free Analysis
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </button>
+            <SignedOut>
+              <SignUpButton mode="modal">
+                <button className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4 rounded-md transition-colors flex items-center justify-center">
+                  Start Free Analysis
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </button>
+              </SignUpButton>
+            </SignedOut>
+            <SignedIn>
+              <button
+                onClick={handleGetStarted}
+                className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4 rounded-md transition-colors flex items-center justify-center"
+              >
+                Start Free Analysis
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>
+            </SignedIn>
             <button className="border border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-4 rounded-md transition-colors">
               View Sample Report
             </button>
