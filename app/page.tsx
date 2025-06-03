@@ -35,7 +35,7 @@ export default function ATSLandingPage() {
             </div>
 
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="#features" className="text-gray-600 hover:text-blue-600 transition-colors">
+              {/* <Link href="#features" className="text-gray-600 hover:text-blue-600 transition-colors">
                 Features
               </Link>
               <Link href="#how-it-works" className="text-gray-600 hover:text-blue-600 transition-colors">
@@ -43,7 +43,7 @@ export default function ATSLandingPage() {
               </Link>
               <Link href="#pricing" className="text-gray-600 hover:text-blue-600 transition-colors">
                 Pricing
-              </Link>
+              </Link> */}
               <SignedOut>
                 <SignInButton mode="modal">
                   <button className="border border-blue-200 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-md transition-colors">
@@ -246,7 +246,7 @@ export default function ATSLandingPage() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+          {/* <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-blue-600 mb-2">50K+</div>
               <div className="text-gray-600">Resumes Analyzed</div>
@@ -263,7 +263,7 @@ export default function ATSLandingPage() {
               <div className="text-4xl font-bold text-orange-600 mb-2">4.9★</div>
               <div className="text-gray-600">User Rating</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -292,12 +292,10 @@ export default function ATSLandingPage() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
             </SignedIn>
-            <button className="border border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-4 rounded-md transition-colors">
-              View Sample Report
-            </button>
+            
           </div>
 
-          <p className="text-blue-200 text-sm">No signup required • Get results in seconds • 100% free to try</p>
+          <p className="text-blue-200 text-sm"></p>
         </div>
       </section>
 
@@ -313,110 +311,16 @@ export default function ATSLandingPage() {
               </div>
               <p className="text-gray-400 mb-4">The most advanced ATS optimization platform for job seekers.</p>
               <div className="flex space-x-4">
-                <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 cursor-pointer">
-                  <span className="text-sm">f</span>
-                </div>
-                <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 cursor-pointer">
-                  <span className="text-sm">t</span>
-                </div>
-                <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 cursor-pointer">
-                  <span className="text-sm">in</span>
-                </div>
+               
               </div>
             </div>
 
-            <div>
-              <h3 className="font-semibold mb-4">Product</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Pricing
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    API
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Integrations
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-4">Resources</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Help Center
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Resume Tips
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Career Advice
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Privacy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Terms
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          
           </div>
 
-          <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="border-t border-gray-800 mt-12 pt-8   justify-center text-center">
             <p className="text-gray-400 text-sm">© {new Date().getFullYear()} ATSMatch Pro. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Cookie Policy
-              </Link>
-            </div>
+           
           </div>
         </div>
       </footer>
