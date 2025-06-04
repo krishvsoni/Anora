@@ -108,6 +108,7 @@ export default function ATSAnalyzePage() {
       const parsed = parseAIResponse(atsResults.aiAnalysis, atsResults.improvedResume)
       setParsedResults(parsed)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [atsResults])
 
   const resetAnalysis = () => {
