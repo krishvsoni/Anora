@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your Perfect ATS",
+  title: "ANORA",
   description: "Upload your resume, paste any job description, and get instant ATS compatibility scores and suggestions.",
 };
 

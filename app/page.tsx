@@ -30,7 +30,7 @@ export default function ATSLandingPage() {
                 <Target className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                ATSMatch Pro
+                ANORA
               </span>
             </div>
 
@@ -76,7 +76,7 @@ export default function ATSLandingPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <span className="mb-6 inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-              AI-Powered ATS Matching 👽
+              Improve You Resume With AI 👽
             </span>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
               Perfect Your{" "}
@@ -107,9 +107,26 @@ export default function ATSLandingPage() {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
               </SignedIn>
-              <button className="border border-blue-200 text-blue-600 hover:bg-blue-50 text-lg px-8 py-4 rounded-md transition-colors">
-                Watch Demo
-              </button>
+                <a
+                href="https://github.com/krishvsoni/perfectATS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-blue-200 text-blue-600 hover:bg-blue-50 text-lg px-8 py-4 rounded-md transition-colors flex items-center justify-center"
+                >
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                  fillRule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.089 2.91.833.091-.647.35-1.089.636-1.34-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.853 0 1.337-.012 2.419-.012 2.749 0 .268.18.579.688.481C19.138 20.2 22 16.448 22 12.021 22 6.484 17.523 2 12 2z"
+                  clipRule="evenodd"
+                  />
+                </svg>
+                Star on GitHub
+                </a>
             </div>
 
             <div className="flex items-center justify-center space-x-6 text-sm text-gray-500">
@@ -307,7 +324,7 @@ export default function ATSLandingPage() {
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
                   <Target className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold">ATSMatch Pro</span>
+                <span className="text-xl font-bold">ANORA</span>
               </div>
               <p className="text-gray-400 mb-4">The most advanced ATS optimization platform for job seekers.</p>
               <div className="flex space-x-4">

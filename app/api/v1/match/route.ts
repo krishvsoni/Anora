@@ -192,7 +192,12 @@ ${jobDescription}
     );
 
     const result = response.data.choices[0].message.content;
-    return NextResponse.json({ result });
+
+    const analysisEndIndex = result.indexOf('Improved Resume:');
+    const aiAnalysis = analysisEndIndex !== -1 ? result.substring(0, analysisEndIndex) : result;
+    const improvedResume = analysisEndIndex !== -1 ? result.substring(analysisEndIndex) : '';
+
+    return NextResponse.json({ aiAnalysis, improvedResume });
 
   } catch (err: any) {
     console.error('Match error:', err);
