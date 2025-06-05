@@ -884,7 +884,7 @@ export default function ATSAnalyzePage() {
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <FileText className="w-5 h-5 mr-2 text-blue-600" />
-                  <h3 className="text-lg font-semibold">Improved Resume</h3>
+                  <h3 className="text-lg font-semibold">Improved Part</h3>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-6">
                   <pre className="text-sm text-gray-700 whitespace-pre-wrap font-sans leading-relaxed">
