@@ -98,8 +98,6 @@ ${resumeText}
 
 Job Description:
 ${jobDescription}
-
-Give the response in Markdown format from above sections
 `;
 
     const modelMap: Record<string, string> = {
