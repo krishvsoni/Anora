@@ -1,5 +1,6 @@
 {
-  "name": "your-perfect-ats",
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "anora",
   "version": "0.1.0",
   "private": true,
   "scripts": {
